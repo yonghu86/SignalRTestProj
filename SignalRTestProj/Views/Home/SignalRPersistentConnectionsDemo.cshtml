@@ -1,0 +1,45 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+
+<!DOCTYPE html>
+ 
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>SignalR永久连接类 Demo</title>
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="~/Scripts/jquery.signalR-2.4.1.min.js"></script>
+</head>
+<body>
+    <div>
+        <h1>SignalR永久连接类 Demo</h1>
+        <div>
+            <input type="text" id="msgContext" placeholder="请输入消息内容...." />
+            <button id="sendMessage" class="btn-primary">Send</button>            
+            <ul id="messages"></ul>
+        </div>
+        <script>
+            var connection = $.connection("/Connections/ChatConnection");
+            connection.logging = true;
+            //客户端接收消息
+            connection.received(function (data) {
+                $('#messages').append('<li>' + data + '</li>');
+            });
+            //连接错误处理
+            connection.error(function (err) {
+                alert('与服务器连接报错:'+ err.message);
+            });
+            //连接成功
+            connection.start().done(function () {
+                $('#sendMessage').click(function () {
+                    var val = $('#msgContext').val();
+                    //向服务器端发送消息
+                    connection.send(val);
+                });
+            });
+        </script>
+    </div>
+</body>
+</html>
