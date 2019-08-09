@@ -32,5 +32,11 @@ namespace SignalRTestProj.Controllers
             ViewBag.Message = "SignalR永久连接类 Demo";
             return View();
         }
+
+        public ActionResult HubChat()
+        {
+            ViewBag.ClientName = "用户-" + Guid.NewGuid().ToString().Substring(1,6);
+            return View();
+        }
     }
 }

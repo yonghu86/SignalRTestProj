@@ -74,9 +74,6 @@ F:\RDI\SignalRTestProj\SignalRTestProj_1\bin\zh-Hans\System.Web.WebPages.resourc
 F:\RDI\SignalRTestProj\SignalRTestProj_1\bin\zh-Hans\System.Web.WebPages.Deployment.resources.dll
 F:\RDI\SignalRTestProj\SignalRTestProj_1\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
 F:\RDI\SignalRTestProj\SignalRTestProj_1\obj\Debug\SignalRTestProj.csproj.CopyComplete
-F:\RDI\SignalRTestProj\SignalRTestProj\bin\SignalRTestProj_1.dll.config
-F:\RDI\SignalRTestProj\SignalRTestProj\bin\SignalRTestProj_1.dll
-F:\RDI\SignalRTestProj\SignalRTestProj\bin\SignalRTestProj_1.pdb
 F:\RDI\SignalRTestProj\SignalRTestProj\bin\roslyn\csc.exe
 F:\RDI\SignalRTestProj\SignalRTestProj\bin\roslyn\csc.exe.config
 F:\RDI\SignalRTestProj\SignalRTestProj\bin\roslyn\csc.rsp
@@ -147,6 +144,9 @@ F:\RDI\SignalRTestProj\SignalRTestProj\bin\zh-Hans\System.Web.WebPages.Deploymen
 F:\RDI\SignalRTestProj\SignalRTestProj\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
 F:\RDI\SignalRTestProj\SignalRTestProj\obj\Debug\SignalRTestProj.csproj.CoreCompileInputs.cache
 F:\RDI\SignalRTestProj\SignalRTestProj\obj\Debug\SignalRTestProj.csproj.CopyComplete
-F:\RDI\SignalRTestProj\SignalRTestProj\obj\Debug\SignalRTestProj_1.dll
-F:\RDI\SignalRTestProj\SignalRTestProj\obj\Debug\SignalRTestProj_1.pdb
 F:\RDI\SignalRTestProj\SignalRTestProj\obj\Debug\SignalRTestProj.csprojAssemblyReference.cache
+F:\RDI\SignalRTestProj\SignalRTestProj\bin\SignalRTestProj.dll.config
+F:\RDI\SignalRTestProj\SignalRTestProj\bin\SignalRTestProj.dll
+F:\RDI\SignalRTestProj\SignalRTestProj\bin\SignalRTestProj.pdb
+F:\RDI\SignalRTestProj\SignalRTestProj\obj\Debug\SignalRTestProj.dll
+F:\RDI\SignalRTestProj\SignalRTestProj\obj\Debug\SignalRTestProj.pdb

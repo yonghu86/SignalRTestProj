@@ -1,0 +1,53 @@
+﻿
+@{
+    ViewBag.Title = "HubChat";
+}
+
+@model dynamic
+
+<h2>Hub Chat</h2>
+
+<div>
+    <input type="hidden" id="ClientName" value="@ViewBag.ClientName"/>
+    <input type="text" id="msg" />
+    <input type="button" id="broadcast" value="广播" />
+    <br />
+
+    <h3>
+        消息记录： (<span id="MyClientName">@ViewBag.ClientName</span>):
+    </h3>
+
+    <ul id="messages"></ul>
+</div>
+
+@section scripts {
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="~/Scripts/jquery.signalR-2.4.1.min.js"></script>
+    <script src="~/signalr/hubs"></script>
+    <script>
+        $(function () {            
+            var chat = $.connection.chat;
+            var myClientName = $('#ClientName').val();            
+            chat.client.addSomeMessage = function (clientName, message) {
+                writeMsg('<b>' + clientName + '</b> 对大家说: ' + message, 'event-message');
+            };
+
+            $('#msg').focus();
+            // 开始连接
+            $.connection.hub.start().done(function () {
+                $('#broadcast').click(function () {
+                    // 调用send方法
+                    chat.server.send(myClientName, $('#msg').val());                   
+                    $('#msg').val('').focus();
+                });
+            });
+
+            //写消息
+            function writeMsg(eventLog, logClass) {
+                var now = new Date();
+                var nowStr = now.getHours() + ':' + now.getMinutes() + ':' + now.getSeconds();
+                $('#messages').prepend('<li class="' + logClass + '"><b>' + nowStr + '</b> ' + eventLog + '.</li>');
+            }
+        });
+    </script>
+}

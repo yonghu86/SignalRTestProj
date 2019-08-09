@@ -34,7 +34,7 @@ SignalR将与客户端进行实时通信带给了ASP.NET。这样既好用，又
 
 - [史上最全面的SignalR系列教程-2、SignalR 实现推送功能-永久连接类实现方式](http://blog.rdiframework.net/article/226)
 
-- [史上最全面的SignalR系列教程-3、SignalR 实现推送功能-集线器类实现方式](http://blog.rdiframework.net/article/226)
+- [史上最全面的SignalR系列教程-3、SignalR 实现推送功能-集线器类实现方式](http://blog.rdiframework.net/article/227)
 
 - 更多正在陆续更新中...  
 
