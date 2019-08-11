@@ -1,0 +1,15 @@
+F:\Project\SignalRTestProj\SignalRSelfHostWinFormClient\bin\Debug\SignalRSelfHostWinFormClient.exe.config
+F:\Project\SignalRTestProj\SignalRSelfHostWinFormClient\bin\Debug\SignalRSelfHostWinFormClient.exe
+F:\Project\SignalRTestProj\SignalRSelfHostWinFormClient\bin\Debug\SignalRSelfHostWinFormClient.pdb
+F:\Project\SignalRTestProj\SignalRSelfHostWinFormClient\bin\Debug\Microsoft.AspNet.SignalR.Client.dll
+F:\Project\SignalRTestProj\SignalRSelfHostWinFormClient\bin\Debug\Newtonsoft.Json.dll
+F:\Project\SignalRTestProj\SignalRSelfHostWinFormClient\bin\Debug\Microsoft.AspNet.SignalR.Client.pdb
+F:\Project\SignalRTestProj\SignalRSelfHostWinFormClient\bin\Debug\Microsoft.AspNet.SignalR.Client.xml
+F:\Project\SignalRTestProj\SignalRSelfHostWinFormClient\bin\Debug\Newtonsoft.Json.xml
+F:\Project\SignalRTestProj\SignalRSelfHostWinFormClient\obj\Debug\SignalRSelfHostWinFormClient.SignalRSelfHostWinFormClientTest.resources
+F:\Project\SignalRTestProj\SignalRSelfHostWinFormClient\obj\Debug\SignalRSelfHostWinFormClient.Properties.Resources.resources
+F:\Project\SignalRTestProj\SignalRSelfHostWinFormClient\obj\Debug\SignalRSelfHostWinFormClient.csproj.GenerateResource.cache
+F:\Project\SignalRTestProj\SignalRSelfHostWinFormClient\obj\Debug\SignalRSelfHostWinFormClient.csproj.CoreCompileInputs.cache
+F:\Project\SignalRTestProj\SignalRSelfHostWinFormClient\obj\Debug\SignalRSelfHostWinFormClient.csproj.CopyComplete
+F:\Project\SignalRTestProj\SignalRSelfHostWinFormClient\obj\Debug\SignalRSelfHostWinFormClient.exe
+F:\Project\SignalRTestProj\SignalRSelfHostWinFormClient\obj\Debug\SignalRSelfHostWinFormClient.pdb

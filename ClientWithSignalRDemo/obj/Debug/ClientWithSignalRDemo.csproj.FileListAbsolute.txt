@@ -23,3 +23,16 @@ F:\RDI\SignalRTestProj\ClientWithSignalRDemo\obj\Debug\ClientWithSignalRDemo.csp
 F:\RDI\SignalRTestProj\ClientWithSignalRDemo\obj\Debug\ClientWithSignalRDemo.csproj.CopyComplete
 F:\RDI\SignalRTestProj\ClientWithSignalRDemo\obj\Debug\ClientWithSignalRDemo.exe
 F:\RDI\SignalRTestProj\ClientWithSignalRDemo\obj\Debug\ClientWithSignalRDemo.pdb
+F:\Project\SignalRTestProj\ClientWithSignalRDemo\bin\Debug\ClientWithSignalRDemo.exe.config
+F:\Project\SignalRTestProj\ClientWithSignalRDemo\bin\Debug\ClientWithSignalRDemo.exe
+F:\Project\SignalRTestProj\ClientWithSignalRDemo\bin\Debug\ClientWithSignalRDemo.pdb
+F:\Project\SignalRTestProj\ClientWithSignalRDemo\bin\Debug\Microsoft.AspNet.SignalR.Client.dll
+F:\Project\SignalRTestProj\ClientWithSignalRDemo\bin\Debug\Newtonsoft.Json.dll
+F:\Project\SignalRTestProj\ClientWithSignalRDemo\bin\Debug\Microsoft.AspNet.SignalR.Client.pdb
+F:\Project\SignalRTestProj\ClientWithSignalRDemo\bin\Debug\Microsoft.AspNet.SignalR.Client.xml
+F:\Project\SignalRTestProj\ClientWithSignalRDemo\bin\Debug\Newtonsoft.Json.xml
+F:\Project\SignalRTestProj\ClientWithSignalRDemo\obj\Debug\ClientWithSignalRDemo.csprojAssemblyReference.cache
+F:\Project\SignalRTestProj\ClientWithSignalRDemo\obj\Debug\ClientWithSignalRDemo.csproj.CoreCompileInputs.cache
+F:\Project\SignalRTestProj\ClientWithSignalRDemo\obj\Debug\ClientWithSignalRDemo.csproj.CopyComplete
+F:\Project\SignalRTestProj\ClientWithSignalRDemo\obj\Debug\ClientWithSignalRDemo.exe
+F:\Project\SignalRTestProj\ClientWithSignalRDemo\obj\Debug\ClientWithSignalRDemo.pdb
