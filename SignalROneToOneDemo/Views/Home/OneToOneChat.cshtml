@@ -1,0 +1,115 @@
+﻿
+@{
+    ViewBag.Title = "OneToOneChat";
+}
+
+<h2>点对点（一对一）聊天实例代码</h2>
+
+<div>
+    <div>用户名称：<label id="userName"></label>(<label id="conId"></label>)</div>
+    
+    <div style="width:25%;border:1px solid #ff0000">
+        <div>在线用户列表</div>
+        <ul id="users"></ul>
+    </div>
+    <div id="userBox">
+    </div>
+</div>
+
+@section scripts {
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="~/Scripts/jquery.signalR-2.4.1.min.js"></script>
+    <script src="~/signalr/hubs"></script>
+    <script type="text/javascript">
+        var clients = [];
+        var chat;
+        $(function () {        
+            chat = $.connection.chat;
+            console.info(chat);
+
+            //显示提示方法
+            chat.client.showMessage = function (message) {
+                alert(message);
+            }
+
+            //注册显示信息的方法
+            chat.client.addMessage = function (message, connectionId) {
+                //debugger
+                if ($.inArray(connectionId, clients)==-1) {
+                    showWin(connectionId);
+                }
+      
+                $("#messages" + connectionId).each(function () {
+                    $(this).append('<li>'+message+'</li>');
+                })
+            }
+
+            //注册显示所有用户的方法
+            chat.client.getUsers = function (data) {            
+                if (data) {
+                    var json = $.parseJSON(data);                    
+                    console.info(json);
+                    $("#users").html(" ");
+                    for (var i = 0; i < json.length; i++) {                        
+                        var html = '<li>用户名:' + json[i].Name + '<input type="button" connectionId="' + json[i].ConnectionID + '" id="'  + json[i].ConnectionID + '" value="聊天"  onclick="userChat(this)" />' ;
+                        $("#users").append(html);
+                    }
+                }
+            }
+
+            //注册显示推出聊天提示的方法
+            chat.client.exitUser = function (data)
+            {
+                alert(data);
+            }
+
+            //注册显示个人信息的方法
+            chat.client.showId = function (data)
+            {
+                $("#conId").html(data);
+                clients.push(data);
+            }
+
+            //获取用户名称
+            $('#userName').html(prompt('请输入您的名称', ''));
+ 
+            //连接成功后获取自己的信息
+            $.connection.hub.start().done(function () {
+                chat.server.getName($('#userName').html());
+            });
+        });
+
+        //开始聊天
+        function userChat(obj)
+        {
+            var connectionId = $(obj).attr('connectionId');
+            showWin(connectionId);
+        }
+
+        function showWin(connectionId)
+        { 
+            clients.push(connectionId);
+            var html = '<div style="float:left;margin-top:5px;margin-right: 5px;margin-bottom: 5px;border:1px solid #ff0000" id="' + connectionId + '" connectionId="' + connectionId + '">' + connectionId + '"的房间聊天记录如下:<button onclick="exitChat(this)">退出</button><ul id="messages' + connectionId + '"></ul><input type="text" /> <button onclick="sendMessage(this)">发送</button></div>';
+            $("#userBox").append(html);
+        }
+
+        function exitChat(btnObj)
+        {          
+            $(btnObj).parent().remove();
+            chat.server.exitChat(connectionId);
+        }
+
+        //发送消息
+        function sendMessage(data)
+        {
+            var message = $(data).prev().val();
+            var  userObj = $(data).parent();
+            var username = $("#userName").html();
+            message = username + ":" + message;
+            console.info($(userObj).attr("connectionId"));
+            var targetConnectionId = $(userObj).attr("connectionId");
+            chat.server.sendMessage(targetConnectionId, message);
+            $(data).prev().val("");
+        }
+    </script>
+}
