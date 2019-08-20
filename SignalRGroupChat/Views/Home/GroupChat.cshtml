@@ -1,0 +1,113 @@
+﻿
+@{
+    ViewBag.Title = "GroupChat";
+}
+
+<h2>聊天室（群聊）实例</h2>
+<div class="row">
+    当前用户:<label id="username"></label> 
+</div>
+<div class="row">
+    输入房间名:<input type="text" class="form-control" style="display: initial;" value="技术交流1" id="Roomname" /><button id="CreatRoom" class="btn btn-success">创建聊天室</button>     
+</div>
+<div class="row">
+    <div class="col-md-3">
+        <div style="float:left;border:1px solid #ff0000;margin:5px;">
+            <div>房间列表</div>               
+            <ul id="roomlist">
+            </ul>
+        </div> 
+    </div>
+    <div class="col-md-9">
+         <div id="RoomList">
+    </div>
+    </div>  
+</div>
+<div class="row">
+    <div class="col-md-4"></div>
+    <ul id="UserList"></ul>
+    <div class="col-md-8"></div>  
+</div>
+
+<br />
+
+@section scripts {
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="~/Scripts/jquery.signalR-2.4.1.min.js"></script>
+    <script src="~/signalr/hubs"></script>
+    <script type="text/javascript">
+        var chat
+        var roomcount = 0;
+        $(function () {
+            chat = $.connection.groupHub;
+            chat.client.showMessage = function (Message) {
+                alert(Message);
+            }
+
+            chat.client.sendMessage = function (roomname, message) {
+                $("#" + roomname).find("ul").each(function () {
+                    $(this).append('<li>'+message+'</li>')
+                })
+            }
+            chat.client.removeRoom = function (data) {
+                alert(data);
+            }
+            chat.client.addRoom = function (roomname) {
+                var html = '<table class="table"><tr><td><div style="width: 80%;margin:5px;border:1px solid #ff0000;" id="' + roomname + '" roomname="' + roomname + '"><button onclick="RemoveRoom(this)"  class="btn-danger">退出</button>\
+                                <label>' + roomname + '</label>房间\
+                                            聊天记录如下:<ul>\
+                                            </ul>\
+                                <input type="text" /> <button class="btn btn-success" onclick="SendMessage(this)">发送</button>\
+                                </div></td></tr></table>'
+                $("#RoomList").append(html);
+            }
+
+            //注册查询房间列表的方法
+            chat.client.getRoomlist = function (data) {
+                if (data) {
+                    var jsondata = $.parseJSON(data);
+                    $("#roomlist").html(" ");
+                    for (var i = 0; i < jsondata.length; i++) {
+                        var html = ' <li>房间名:' + jsondata[i].RoomName + '<button roomname="'+jsondata[i].RoomName+'"  class="btn-sm btn-info" onclick="AddRoom(this)">加入</button></li>';
+                        $("#roomlist").append(html);
+                    }
+                }
+            }
+
+            // 获取用户名称。
+            $('#username').html(prompt('请输入您的名称:', ''));
+
+            $.connection.hub.start().done(function () {
+                $('#CreatRoom').click(function () {
+                    if (roomcount < 2) {
+                        chat.server.creatRoom($("#Roomname").val());
+                        roomcount++;
+                    } else {
+                        alert("聊天窗口只允许有2个")
+                    }
+                })
+            });
+        });
+
+        function SendMessage(btn) {
+            var message = $(btn).prev().val();
+            var room = $(btn).parent();
+            var username = $("#username").html();
+            message = username + ":" + message;
+            var roomname = $(room).attr("roomname");
+            chat.server.sendMessage(roomname,message);
+        }
+
+        function RemoveRoom(btn) {
+            var room = $(btn).parent();
+            var roomname = $(room).attr("roomname");
+            $(room).remove();
+            chat.server.removeFromRoom(roomname);
+        }
+
+        function AddRoom(roomname) {
+             var data =$(roomname).attr("roomname");
+             chat.server.addToRoom(data);
+        }
+    </script>
+}
