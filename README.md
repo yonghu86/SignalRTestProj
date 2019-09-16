@@ -30,6 +30,10 @@ SignalR将与客户端进行实时通信带给了ASP.NET。这样既好用，又
 
 ## 5、史上最全面的SignalR系列文章列表 ##
 
+- [RDIFramework.NET ━ .NET敏捷开发框架全新发布-最好用的.NET开发框架 100%源码授权](http://blog.rdiframework.net/article/236)
+
+- [RDIFramework.NET敏捷开发框架通过SignalR技术整合即时通讯(IM)](http://blog.rdiframework.net/article/229)
+
 - [史上最全面的SignalR系列教程-1、认识SignalR](http://blog.rdiframework.net/article/225)
 
 - [史上最全面的SignalR系列教程-2、SignalR 实现推送功能-永久连接类实现方式](http://blog.rdiframework.net/article/226)
@@ -37,6 +41,10 @@ SignalR将与客户端进行实时通信带给了ASP.NET。这样既好用，又
 - [史上最全面的SignalR系列教程-3、SignalR 实现推送功能-集线器类实现方式](http://blog.rdiframework.net/article/227)
 
 - [史上最全面的SignalR系列教程-4、SignalR 自托管全解(使用Self-Host)-附各终端详细实例](http://blog.rdiframework.net/article/228)
+
+- [史上最全面的SignalR系列教程-5、SignalR 实现一对一聊天](http://blog.rdiframework.net/article/231)
+
+- [史上最全面的SignalR系列教程-6、SignalR 实现聊天室](http://blog.rdiframework.net/article/232)
 
 - 更多正在陆续更新中...  
 
