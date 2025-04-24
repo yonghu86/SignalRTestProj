@@ -8,11 +8,11 @@
 
 -----
 ## 2、SignalR介绍 ##
-											
+
 SignalR实现服务器与客户端的实时通信	，她是一个面向 ASP.NET 开发人员的库，可简化将实时 web 功能添加到应用程序的过程。 实时 web 功能是让服务器代码将内容推送到连接的客户端立即可用，而不是让服务器等待客户端请求新数据的能力。										
 											
 ## 3、百度百科给它的定义 ##
-		
+
 实现实时通信。
 
 什么是实时通信的Web呢？就是让客户端（Web页面）和服务器端可以互相通知消息及调用方法，当然这是实时操作的。											
@@ -30,21 +30,22 @@ SignalR将与客户端进行实时通信带给了ASP.NET。这样既好用，又
 
 ## 5、史上最全面的SignalR系列文章列表 ##
 
-- [RDIFramework.NET ━ .NET敏捷开发框架全新发布-最好用的.NET开发框架 100%源码授权](http://blog.rdiframework.net/article/236)
+- [RDIFramework.NET Web敏捷开发框架(.NET6+、Framework双引擎)](http://www.rdiframework.net/article/detail/611869993467973)
 
-- [RDIFramework.NET敏捷开发框架通过SignalR技术整合即时通讯(IM)](http://blog.rdiframework.net/article/229)
+- [RDIFramework.NET CS敏捷开发框架(.NET6+、Framework双引擎、全网唯一)](http://www.rdiframework.net/article/detail/611866730815557)
+- [RDIFramework.NET敏捷开发框架通过SignalR技术整合即时通讯(IM)](http://www.rdiframework.net/article/detail/229)
 
-- [史上最全面的SignalR系列教程-1、认识SignalR](http://blog.rdiframework.net/article/225)
+- [史上最全面的SignalR系列教程-1、认识SignalR](http://www.rdiframework.net/article/detail/225)
 
-- [史上最全面的SignalR系列教程-2、SignalR 实现推送功能-永久连接类实现方式](http://blog.rdiframework.net/article/226)
+- [史上最全面的SignalR系列教程-2、SignalR 实现推送功能-永久连接类实现方式](http://www.rdiframework.net/article/detail/226)
 
-- [史上最全面的SignalR系列教程-3、SignalR 实现推送功能-集线器类实现方式](http://blog.rdiframework.net/article/227)
+- [史上最全面的SignalR系列教程-3、SignalR 实现推送功能-集线器类实现方式](http://www.rdiframework.net/article/detail/227)
 
-- [史上最全面的SignalR系列教程-4、SignalR 自托管全解(使用Self-Host)-附各终端详细实例](http://blog.rdiframework.net/article/228)
+- [史上最全面的SignalR系列教程-4、SignalR 自托管全解(使用Self-Host)-附各终端详细实例](http://www.rdiframework.net/article/detail/228)
 
-- [史上最全面的SignalR系列教程-5、SignalR 实现一对一聊天](http://blog.rdiframework.net/article/231)
+- [史上最全面的SignalR系列教程-5、SignalR 实现一对一聊天](http://www.rdiframework.net/article/detail/231)
 
-- [史上最全面的SignalR系列教程-6、SignalR 实现聊天室](http://blog.rdiframework.net/article/232)
+- [史上最全面的SignalR系列教程-6、SignalR 实现聊天室](http://www.rdiframework.net/article/detail/232)
 
 - 更多正在陆续更新中...  
 
@@ -52,15 +53,17 @@ SignalR将与客户端进行实时通信带给了ASP.NET。这样既好用，又
 
 ## 6、参考文章 ##
 
-- [微信公众号开发系列-玩转微信开发-目录汇总](http://blog.rdiframework.net/article/216)
+- [微信公众号开发系列-玩转微信开发-目录汇总](http://www.rdiframework.net/article/detail/216)
 
-- [RDIFramework.NET — 基于.NET的快速信息化系统开发框架 — 系列目录](http://blog.rdiframework.net/article/190)
+- [RDIFramework.NET — 基于.NET的快速信息化系统开发框架 — 系列目录](http://www.rdiframework.net/article/detail/190)
 
-- [RDIFramework.NET ━ .NET快速信息化系统开发框架 ━ 工作流程组件介绍](http://blog.rdiframework.net/article/169)
+- [RDIFramework.NET ━ .NET快速信息化系统开发框架 ━ 工作流程组件介绍](http://www.rdiframework.net/article/detail/169)
 
-- [RDIFramework.NET框架SOA解决方案（集Windows服务、WinForm形式与IIS形式发布）-分布式应用](http://blog.rdiframework.net/article/189)
+- [RDIFramework.NET框架SOA解决方案（集Windows服务、WinForm形式与IIS形式发布）-分布式应用](http://www.rdiframework.net/article/detail/189)
 
-- [RDIFramework.NET代码生成器全新V3.5版本发布-重大升级](http://blog.rdiframework.net/article/199)
+- [国思RDIF低代码快速开发框架](http://www.rdiframework.net/article/detail/655918543290437)
+
+ 
 
 
 -----
@@ -68,8 +71,6 @@ SignalR将与客户端进行实时通信带给了ASP.NET。这样既好用，又
   一路走来数个年头，感谢RDIFramework.NET框架的支持者与使用者，大家可以通过下面的地址了解详情。 
 
   RDIFramework.NET官方网站：http://www.rdiframework.net/ 
-
-  RDIFramework.NET官方博客：http://blog.rdiframework.net/ 
 
   同时需要说明的，以后的所有技术文章以官方网站为准，欢迎大家收藏！ 
 
@@ -79,4 +80,4 @@ SignalR将与客户端进行实时通信带给了ASP.NET。这样既好用，又
 
   扫描二维码立即关注
 
-![微信号：guosisoft](http://doc.rdiframework.net/blog/article/20180822094544955.png)
+![微信号：guosisoft](http://doc.rdiframework.net/weixin.png)
